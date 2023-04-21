@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="tablesDock" dataType="DATA_TYPE_AQUI" 
+     title="TITULO_AQUI" name="NOME_AQUI">
+
+    <button onClick="teste()" /> 
+
+
+    <script>
+    function teste()
+        SceneLib.registerPlugin(function(scene, attachment)
+    
+            showMessage(
+                "Plugin anexado a um tabuleiro de tamanho " .. scene.worldWidth ..
+                    scene.worldMetricName .. " x " .. scene.worldHeight ..
+                    scene.worldMetricName .. " de cor de fundo " .. scene.bkgColor);
+    
+    
+            showMessage(tableToStr(scene.items.selection))
+        
+        end);
+    end
+
+    </script>
+
+</form>
+
+
+
