@@ -33,19 +33,17 @@ local function constructNew_NOME_AQUI()
 
     obj.button1 = GUI.fromHandle(_obj_newObject("button"));
     obj.button1:setParent(obj);
+    obj.button1:setText("Teste");
     obj.button1:setName("button1");
 
 
     function teste()
+        require("ndb.lua");   
         SceneLib.registerPlugin(function(scene, attachment)
-    
-            showMessage(
-                "Plugin anexado a um tabuleiro de tamanho " .. scene.worldWidth ..
-                    scene.worldMetricName .. " x " .. scene.worldHeight ..
-                    scene.worldMetricName .. " de cor de fundo " .. scene.bkgColor);
-    
-    
-            showMessage(tableToStr(scene.items.selection))
+
+            local selectedToken = scene.items.selection[1]     
+
+            showMessage((selectedToken.ownerUserID))
         
         end);
     end
