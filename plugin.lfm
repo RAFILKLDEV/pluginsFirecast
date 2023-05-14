@@ -12,7 +12,7 @@
 
             local selectedToken = scene.items.selection[1]     
 
-            showMessage((selectedToken.ownerUserID))
+            showMessage((selectedToken))
         
         end);
     end
